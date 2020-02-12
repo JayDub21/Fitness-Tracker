@@ -11,8 +11,9 @@ const mongoose = require("mongoose");
 // Port
 const PORT = process.env.PORT || 3000;
 
+
 // Models
-var db = require("./models");
+// var db = require("./models");
 
 
 // Express
@@ -23,14 +24,17 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("public"));
 
+
 // Routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+
 
 // MongoDB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessdb", { useNewUrlParser: true });
 
+
 // Fire It UPP
 app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
 });
