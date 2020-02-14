@@ -1,11 +1,13 @@
 # Fitneess Tracker
 ```sh
-A Mongo database with a Mongoose schema and handles routes with Express.
+A Mongo database with a Mongoose schema that handles routes with Express.
 ```
 
 ### Summary
 ```sh
-It is easier to reach fitness goals when you track workout progress. The user will be able to track their fitness trends to help with accountability and motivation.
+It is easier to reach fitness goals when you track workout progress. 
+The user will be able to track their fitness trends to help with 
+accountability and motivation.
 ```
 
 <!-- ###### [View Fitness Tracker Here!](https://fitness-tracker-jw.herokuapp.com/) -->
