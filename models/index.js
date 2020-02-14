@@ -2,6 +2,6 @@
 //    Exporting Workout Route
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 module.exports = {
-    Workout: require("./workout"),
+    Workout: require("./Workout")
     // User: require("./exercise")
 };
