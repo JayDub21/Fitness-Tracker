@@ -13,6 +13,15 @@ module.exports = function (app) {
         });
     });
 
+    // Get workout data
+    app.get("api/workouts/range", (req, res) => {
+        db.Workout.find({}).then(function (response) {
+            req.json(response);
+        }).catch(err => {
+            res.json(err);
+        });
+    });
+
     // Posts New Workouts to DB
     app.put("/api/workouts/:id", (req, res) => {
         const wrkt = { _id: req.params.id };
@@ -37,15 +46,5 @@ module.exports = function (app) {
             res.json(response);
         });
     });
-
-    // Get workout data
-    app.get("api/workouts/range", (req, res) => {
-        db.Workout.find({}).then(function (response) {
-            req.json(response);
-        }).catch(err => {
-            res.json(err);
-        });
-    });
-
 
 };

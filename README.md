@@ -1,28 +1,28 @@
-# Fitneess-Tracker
+# Fitneess Tracker
+```sh
+A Mongo database with a Mongoose schema and handles routes with Express.
+```
 
-For this assignment, you'll create a workout tracker. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+### Summary
+```sh
+It is easier to reach fitness goals when you track workout progress. The user will be able to track their fitness trends to help with accountability and motivation.
+```
 
+<!-- ###### [View Fitness Tracker Here!](https://fitness-tracker-jw.herokuapp.com/) -->
 
-## Business Context
+#### Start Page:
+![Getting Started](/images/ftStart.png)
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
+#### Insert Workout Details:
+![Getting Started](/images/ftWrkt.png)
 
-## Acceptance Criteria
-
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
-
-The user should be able to:
-
- [] * Add exercises to a previous workout plan.
-
- [] * Add new exercises to a new workout plan.
-
-
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the Github repository
+### Technologies:
+```sh
+* JavaScript
+* Node.JS
+* Express.JS
+* MongoDB
+* Mongoose.JS
+* Heroku
+* mLab
+```
