@@ -36,7 +36,7 @@ module.exports = function (app) {
     // Posts New Workouts to DB
     app.post("/api/workouts/:id", (req, res) => {
         const wrkt = { _id: req.params.id };
-        db.Workout.findOneAndUpdate(wrkt, {
+        db.Workout.find(wrkt, {
             $push: { exercises: [req.body] }
         }, (err, response) => {
             if (err) {
