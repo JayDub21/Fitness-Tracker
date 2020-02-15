@@ -12,6 +12,8 @@
     "author": "Justin Wofford",
     "license": "ISC",
     "dependencies": {
+        "node": "^12.13.1",
+        "npm": "^6.12.1",
         "express": "^4.17.1",
         "mongoose": "^5.9.0",
         "morgan": "^1.9.1"
