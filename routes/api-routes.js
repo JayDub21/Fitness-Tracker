@@ -25,29 +25,27 @@ module.exports = function (app) {
     // Get single workout by id.
     app.get("/api/workouts/:id", function (req, res) {
         const id = req.params.id;
-        db.Workout.findById(id, function (err, dbWorkout) {
+        db.Workout.findById(id, function (err, response) {
             if (err) {
                 console.error(err)
             }
-            res.json(dbWorkout);
+            res.json(response);
         })
     })
 
     // Posts New Workouts to DB
-    app.post("/api/workouts/:id", (req, res) => {
+    app.put("/api/workouts/:id", (req, res) => {
+        console.log(`New Workout: ${req.body}`);
         const wrkt = { _id: req.params.id };
-        db.Workout.find(wrkt, {
-            $push: { exercises: [req.body] }
-        }, (err, response) => {
-            if (err) {
-                res.json(err);
-            } else {
+        db.Workout.findOneAndUpdate({ _id: req.params.id },
+            {
+                $push: { exercises: req.body }
+            }).then(function (response) {
                 res.json(response);
-            }
-        });
+            })
     });
 
-    // Get  Workout By ID
+
     app.post("/api/workouts", (req, res) => {
         // const id = req.params.id;
         db.Workout.create({ exercise: req.body }).then(function (response) {

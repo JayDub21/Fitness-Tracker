@@ -6,17 +6,17 @@ const WktSchema = new Schema({
         type: Date,
         default: Date.now
     },
+
     exercises: [{
-
-        type: String,
-        name: String,
-        duration: Number,
-        weight: Number,
-        reps: Number,
-        sets: Number,
-        distance: Number
-    }]
-
+        type: { type: String },
+        name: { type: String },
+        distance: { type: Number },
+        duration: { type: Number },
+        weight: { type: Number },
+        reps: { type: Number },
+        sets: { type: Number },
+    }],
+    // This is where you need : totalDuration: Number
 });
 
 const Workout = mongoose.model("Workout", WktSchema);
