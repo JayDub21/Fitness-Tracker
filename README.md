@@ -18,6 +18,9 @@ accountability and motivation.
 #### Insert Workout Details:
 ![Getting Started](/images/ftWrkt.png)
 
+#### Information Stored
+![Getting Started](/images/ftLastWrkt.png)
+
 ### Technologies:
 ```sh
 * JavaScript
