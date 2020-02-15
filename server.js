@@ -36,5 +36,5 @@ require("./routes/api-routes.js")(app);
 
 // Fire It UPP
 app.listen(PORT, () => {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    console.log(`App running on port ${PORT}!`);
 });
