@@ -6,16 +6,18 @@ module.exports = function (app) {
 
     // Gets All Workouts From DB
     app.get("/api/workouts", (req, res) => {
-        db.Workout.find({}).then(function (response) {
-            req.json(response);
-        }).catch(err => {
-            res.json(err);
-        });
+        db.Workout.find({})
+            .sort({ "day": 1 }).then(function (response) {
+                res.json(response);
+            }).catch(err => {
+                res.json(err);
+            });
     });
 
     // Get workout data
     app.get("api/workouts/range", (req, res) => {
-        db.Workout.find({}).populate(function (response) {
+        console.log(`Range: ${req}`)
+        db.Workout.find({}).then(function (response) {
             req.json(response);
         }).catch(err => {
             res.json(err);
