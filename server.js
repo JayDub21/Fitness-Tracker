@@ -12,7 +12,7 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3000
 
 // Models
-// var db = require("./models");
+var db = require("./models");
 
 // Express
 var app = express();
