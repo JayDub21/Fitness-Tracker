@@ -10,10 +10,10 @@ const mongoose = require("mongoose");
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 // Port
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 // Models
-var db = require("./models");
+// var db = require("./models");
 
 // Express
 var app = express();
@@ -21,14 +21,18 @@ var app = express();
 // Logger (Must be BELOW express)
 app.use(logger("dev"));
 
-app.use(express.urlencoded({
+app.use(
+  express.urlencoded({
     extended: true
-}));
+  })
+);
 app.use(express.json());
 app.use(express.static("public"));
 
 // MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true
+});
 
 // Routes
 require("./routes/html-routes.js")(app);
@@ -36,5 +40,5 @@ require("./routes/api-routes.js")(app);
 
 // Fire It UPP
 app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
+  console.log(`App running on port ${PORT}!`);
 });

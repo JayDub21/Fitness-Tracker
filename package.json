@@ -1,24 +1,22 @@
 {
-    "name": "mongoose_skeleton",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "start": "node server.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "watch": "nodemon server.js",
-        "seed": "node seeders/seed.js"
-    },
-    "author": "Justin Wofford",
-    "license": "ISC",
-    "dependencies": {
-        "node": "^12.13.1",
-        "npm": "^6.12.1",
-        "express": "^4.17.1",
-        "mongoose": "^5.9.0",
-        "morgan": "^1.9.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.2"
-    }
+  "name": "mongoose_skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Wofford",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^12.13.1",
+    "npm": "^6.12.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
