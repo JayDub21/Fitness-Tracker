@@ -1,6 +1,6 @@
 // Requiring our model
 
-const Workout = require("../models/Workout");
+const Workout = require("../models/workout");
 // const db = require("../models");
 
 module.exports = function(app) {
