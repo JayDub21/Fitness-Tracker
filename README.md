@@ -10,7 +10,7 @@ The user will be able to track their fitness trends to help with
 accountability and motivation.
 ```
 
-###### [View Fitness Tracker Here!](https://fitness-app-jsw.herokuapp.com/)
+#### [View Fitness Tracker Here!](https://fitness-app-jsw.herokuapp.com/)
 
 #### Start Page:
 ![Getting Started](/images/ftStart.png)
