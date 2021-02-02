@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "seeders/seed.js"
+    "seed": "node seeders/seed.js"
   },
   "author": "Justin Wofford",
   "license": "ISC",
