@@ -1,34 +1,34 @@
 // Requiring our model
 
-const db = require("../models");
+const db = require('../models');
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Gets All Workouts From DB
-  app.get("/api/workouts", (req, res) => {
+  app.get('/api/workouts', (req, res) => {
     db.Workout.find({})
-      .then(function(response) {
+      .then(function (response) {
         res.json(response);
       })
-      .catch(err => {
+      .catch((err) => {
         res.json(err);
       });
   });
 
   // Get workout data
-  app.get("/api/workouts/range", (req, res) => {
+  app.get('/api/workouts/range', (req, res) => {
     db.Workout.find({})
-      .then(function(response) {
+      .then(function (response) {
         res.json(response);
       })
-      .catch(err => {
+      .catch((err) => {
         res.json(err);
       });
   });
 
   // Get single workout by id.
-  app.get("/api/workouts/:id", function(req, res) {
+  app.get('/api/workouts/:id', function (req, res) {
     const id = req.params.id;
-    db.Workout.findById(id, function(err, response) {
+    db.Workout.findById(id, function (err, response) {
       if (err) {
         console.error(err);
       }
@@ -36,27 +36,27 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/workouts", (req, res) => {
+  app.post('/api/workouts', (req, res) => {
     // const id = req.params.id;
     db.Workout.create({ exercise: req.body })
-      .then(function(response) {
+      .then(function (response) {
         res.json(response);
       })
-      .catch(err => {
+      .catch((err) => {
         res.json(err);
       });
   });
 
   // Posts New Workouts to DB
-  app.put("/api/workouts/:id", (req, res) => {
+  app.put('/api/workouts/:id', (req, res) => {
     console.log(`New Workout: ${req.body}`);
     const wrkt = { _id: req.params.id };
     db.Workout.findOneAndUpdate(
       { _id: req.params.id },
       {
-        $push: { exercises: req.body }
+        $push: { exercises: req.body },
       }
-    ).then(function(response) {
+    ).then(function (response) {
       res.json(response);
     });
   });
