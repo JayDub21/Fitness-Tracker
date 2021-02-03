@@ -36,8 +36,9 @@ module.exports = function (app) {
     });
   });
 
+  // Add to existing workout
   app.post('/api/workouts', (req, res) => {
-    // const id = req.params.id;
+    const id = req.params.id;
     db.Workout.create({ exercise: req.body })
       .then(function (response) {
         res.json(response);
