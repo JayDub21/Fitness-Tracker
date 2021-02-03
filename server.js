@@ -29,12 +29,15 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-});
+mongoose
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(() => console.log('Database is conncted'))
+  .catch((err) => console.log(err));
 
 // Routes
 require('./routes/html-routes.js')(app);
