@@ -28,6 +28,10 @@ app.use(
 app.use(express.json());
 app.use(express.static('public'));
 
+// Routes
+require('./routes/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
+
 // MongoDB
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
@@ -38,10 +42,6 @@ mongoose
   })
   .then(() => console.log('Database is conncted'))
   .catch((err) => console.log(err));
-
-// Routes
-require('./routes/html-routes.js')(app);
-require('./routes/api-routes.js')(app);
 
 // Fire It UPP
 app.listen(PORT, () => {
