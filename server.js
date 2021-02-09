@@ -16,8 +16,6 @@ const PORT = process.env.PORT || 3001;
 var app = express();
 
 require('./models');
-require('./routes/html-routes.js')(app);
-require('./routes/api-routes.js')(app);
 
 // Logger (Must be BELOW express)
 app.use(logger('dev'));
@@ -34,6 +32,9 @@ mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost/workout')
   .then(() => console.log('Database is conncted'))
   .catch((err) => console.log(err));
+
+require('./routes/html-routes.js')(app);
+require('./routes/api-routes.js')(app);
 
 // Fire It UPP
 app.listen(PORT, () => {
